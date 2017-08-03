@@ -1,0 +1,344 @@
+@import "taobao.less";
+
+
+//主页中的样式
+
+                                //搜索区域
+.search{
+    .w{position: relative;}
+    width: 100%;
+    background-color:#fff;
+    padding-top: 30px;
+    height: 120px;
+    .logo{
+        margin-left: 22px;
+        margin-right: 99px;
+        .alogo{
+            display: block;width: 145px;height: 58px;text-indent: -9999px;
+            background: url(../images/logo.jpg) no-repeat;}
+        }
+        .search-box{width: 625px;height: 65px;
+            .tab{
+                height: 25px;line-height: 25px;
+                .on{a{color: #FFFFFF;font-weight: bold;} }
+                .baobei.on{background-color: #FF4400;}
+                .tianmao.on{background-color: #c60000;}
+                .dianpu.on{background-color: #FF4400;}
+                }
+            
+            .icon-xiala{display: none;}
+            .tabitem{float: left;.w(50px);height: 25px;.tc;
+                &:hover{background-color: pink;}
+            }
+            .form{
+                    position: relative;width: 625px;height: 40px;
+                    background-color: #FF4400;padding: 3px;
+                    .iconfont{.vc;}
+                    .icon-fangdajing-copy{left: 9px;}
+                    .icon-camera{left: 476px;}
+                    
+                    
+                    .inputtxt{padding-left: 20px;.fl;border: none;
+                    width: 500px;height: 34px;background-color:#FFFFFF ;
+                    }     
+                
+            .button{
+                .fr;border: none;outline: none;cursor: pointer;
+                background-color: transparent;height: 34px;width:119px;
+                color: #FFFFFF; font-weight: bold;.tc;
+                }
+            }
+            .hotwords{
+            margin-top:5px;
+            line-height: 20px;
+            .more{float:right;}
+            }
+        }
+    .erweima{
+        position: absolute;
+        right: 0;padding: 10px;.tc;background-color: #FFFFFF;
+        border: 1px solid #DDDDDD;
+    }
+    &.fixed{
+        top:0;
+        height: auto;
+        padding:10px;
+        position: fixed;
+        z-index:1;
+      .logo{
+        margin-left:0px;margin-right:99px+22px;
+        .alogo{height: 33px; background: url("../images/logo_xiao.png") no-repeat;}
+      }
+      .form{
+            height:35px;
+            .inputtxt{
+                height:35px - 2*3px;
+                padding-left:80px;
+            }
+            .icon-fangdajing-copy{left:88px;}
+            .button{
+                .fr; border:none;outline:none;
+                cursor: pointer;
+                background-color:transparent; 
+                height: 29px;width: 119px;color:#fff;font-weight: bold;.tc;}
+       }
+       .search-box{position: relative; height:35px;}
+       .tab{
+           border:1px solid #ddd;
+           position: absolute;
+           z-index: 1;
+           top:3px;left:3px;
+           line-height: 29px;
+           width: 75px;
+           height:29px ;
+           background-color: #f6f6f6;
+           overflow: hidden;
+           &:hover{height: 29px *3;}
+           .tabitem{
+               float:none;height:29px ;
+               background-color: transparent !important;//!important直接将权限提到最高
+               a{color:#666;}
+           }
+       }
+       .icon-xiala{  
+           display: block;  
+            position: absolute;
+            left: 47px;
+            top: 9px;
+            font-size: 12px;
+            }
+      .erweima,.hotwords{display: none;}
+    }
+}
+
+////////////////////////////////顶部导航
+
+.topnav{
+    padding-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+    background-color: #FFFFFF;width: 100%;overflow: hidden;
+    .w{
+        padding-left: 200px;line-height: 30px;height: 30px;
+        .ztys{color: #FF8400;}
+    }
+    .sperator{.fl;color: #DDDDDD;}
+    .navwrap{.fl;}
+    .item{.fl;padding: 0 8px;color:#333; 
+        &:hover{
+            background-color:#FF8400;border-radius: 13px;
+            a{color: #FFFFFF;}
+        }
+    }
+}
+
+//、、、、、、、、、、、market  主体部分
+
+.market{
+    .navwrap{height: 522px; overflow: hidden;}
+    .mainnav{
+        .title{color:#fff;padding:0 5px;height: 
+        30px;line-height: 30px;}
+        width: 190px;
+        height: 552px;
+         overflow: hidden;
+        background-color: #f40;
+        position: relative;
+        top:-30px;
+        .menu{
+            &:hover{background-color: rgb(249,74,20);}
+            &:hover .submenu{
+                display: block;
+            }
+            .iconfont{margin:0 3px;}
+            padding:0 5px;
+            line-height:30px;
+            a{color:#fff;}
+            color:#fff;
+        }
+        .submenu{
+            color:#333;
+            display: none;
+            position:absolute;
+            z-index: 1;
+            top:30px;
+            left:190px;
+            width:701px;height:520px;border:2px solid #f40;
+            border-left:none;
+        }
+        
+    }
+    .sliders{
+        margin:10px 10px 0px;
+        width: 520px;
+        height: 510px;
+        overflow: hidden;
+        
+        .slider-body{
+            position: absolute;
+            left:0;
+           
+            .slider-item{float: left;}
+        }
+        .btn{
+                cursor: pointer;
+                .vc; width: 24px;height:36px;background:#000;color:#fff;
+                &.btnleft{left:0;} 
+                &.btnright{right:0;}   
+        }
+        .indirector{
+                cursor: pointer;
+                .hc;
+                bottom:10px;
+                .idx{
+                    &.on{
+                        background-color: red;
+                    }
+                    display: inline-block;margin:0 5px; width: 10px;
+                    height: 10px;border-radius: 50%;background-color: #ccc;}
+        }
+        .slider{
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .slider1{
+            width: 520px;
+            height: 280px;
+            .slider-body{
+                width: 520px * 7;
+                height: 280px;
+            }  
+        }
+        .slider2{
+            width: 520px;
+            height: 201px;
+            .slider-body{
+                width: 520px * 8;
+                height: 201px;
+            }
+        }
+        .title{
+            margin-top:7px;
+            border-bottom:2px solid #f40;
+        }
+        
+    }
+    .advs{
+        width: 160px;
+        height: 510px;
+        margin-top:10px;
+         overflow: hidden;
+    }
+    
+//  、、、、、、、、、、、、、、、、、、、、轮播图下边的广告
+
+    .belt{
+        margin-top: 10px;height: 76px;padding: 6px;
+        width: 890px;background-color: #fff;
+        .item{
+            width: 20%;.fl;
+            &:hover{
+                .item-img{border: 1px solid #f40;}
+            }
+        }
+    }
+    .item-img{
+        height: 64px;width: 64px;border-radius: 50%;border: 1px solid #DDDDDD;
+        .fl;margin-right: 20px;
+    }
+    .good-name{.c1;.fs14;}
+    .good-info{.c1;}
+    .good-add{.c9;}
+
+//、、、、、、、、、、、、、、、、、、、、、、、、、我经常逛的
+.like{
+    margin-top:10px;
+    width: 890px;
+    .title{
+        margin-bottom:10px;text-indent: -9999px;line-height: 20px;height:20px;
+        background: url(../images/sp/services-bg.png) no-repeat;
+        background-position: center -608px;
+        .more{
+            text-indent: 0px;.fr;.tc;font-weight: normal;width: 45px;padding:0 10px;
+            height: 20px;border-radius: 10px;background-color: #DDDDDD;color:#000;
+             &:hover{
+                background-color: #f40;color:#fff;
+                }
+            }
+        }    
+        .item{
+            width: 440px;height: 362px;.fl;border:2px solid #0089CD;margin-bottom:10px;
+            &:nth-child(2n+1){margin-right:10px;}    
+            }
+        .col1{
+            width: 100px;
+            height:100%;
+            background-color: #406CC0;
+            .top{margin:10px;color:#fff;font-size:16px;}
+            .topitem{margin:10px;}
+            .topitem a {background: #6689CD;padding:3px 5px;color:#fff;}
+        }
+        .col2{
+            background-color: #fff;
+            width:201px;
+            border-right:1px solid #ddd;
+            .good{.fl;}
+            .small{
+                width:100px;height:200px;
+                &:first-child{
+                    border-right:1px solid #ddd;
+                }
+            }
+            .big{
+                border-top:1px solid #ddd;width: 200px; height:158px;
+                padding:10px;position: relative;
+                &:hover{
+                   .good-detail{display: block;}                       
+                   .info{height:85px;}
+                       }
+            }  
+            .info{
+                transition: all .5s;position: absolute;bottom:7px;width:180px;
+                left:10px;height:24px;overflow:hidden;
+                background-color: rgba(255,255,255,.8);
+            }
+            .good-title{
+                height: 24px;line-height: 24px;
+                .good-mark{
+                    color:#fff;width: 50px;height: 24px;background-color: #459AC4;
+                    .tc();
+                        }
+                    }
+            .good-detail{
+    //              display: none;
+            }    
+        }
+        .col3{
+            background-color: #fff; width: 135px;
+            .big{
+                position: relative;width: 100%;height: 100px;
+                .good-img{
+                    position: absolute;right:3px;bottom:3px;     
+                }
+                .good-name{position: absolute;left:10px;top:20px;}
+                .good-info{position: absolute;left:10px;top:40px;}
+            }
+            .good{
+                border-bottom:1px solid #ddd;
+                &:last-child{border-bottom:none;}
+                &:nth-child(2){height:101px;} 
+            }
+            .small{
+                position: relative;padding:10px; height: 78px;
+                .good-info{
+                    color:#000;.tc;position: absolute;bottom:4px;left:0px; right:0px;
+                    height:24px;line-height: 24px;background-color: rgba(255,255,255,.8);         
+                }
+                &:hover{.good-info{background-color: rgba(255,255,255,1);}}    
+            }
+        }
+    }
+}
+
+
